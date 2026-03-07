@@ -1,0 +1,75 @@
+html,body { height: 100%; padding: 0; margin: 0; }
+
+body {
+    background: rgb(30, 30, 30);
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    padding: 0px;
+}
+
+.img-compare {
+    display: grid;
+    grid-auto-columns: min-content;
+    position: relative;
+}
+
+.img-compare img {
+    margin: 0;
+    padding: 0;
+    vertical-align: top; /* this avoids a strange margin at the bottom of the image */
+}
+
+.img-compare > div {
+    position: relative;
+    grid-column: 1;
+    grid-row: 1;
+    overflow: hidden;
+    background-color: rgb(45, 45, 45);
+    display: inline-block;
+    padding: 0;
+}
+
+.img-compare > div:first-child {
+    z-index: 5;
+    border-right: 1px solid rgb(128, 128, 128);
+    box-sizing: border-box;
+}
+
+.img-compare > .img-compare-slider {
+    position: absolute;
+    z-index: 9;
+    cursor: ew-resize;
+    /*set the appearance of the slider:*/
+    width: 30px;
+    height: 30px;
+    background: center no-repeat #2196F3 url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='white' class='bi bi-arrows' viewBox='0 0 16 16'><path d='M1.146 8.354a.5.5 0 0 1 0-.708l2-2a.5.5 0 1 1 .708.708L2.707 7.5h10.586l-1.147-1.146a.5.5 0 0 1 .708-.708l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L13.293 8.5H2.707l1.147 1.146a.5.5 0 0 1-.708.708z'/></svg>");
+    background-size: 1.5rem 1.5rem;
+    opacity: 0.85;
+    border-radius: 50%;
+}
+
+.img-compare > div > .label {
+    position: absolute;
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.99);
+    background: rgba(0,0,0,0.4);
+    z-index: 2;
+    padding: 0.5em;
+    bottom: 2px;
+    margin: 0;
+}
+
+.img-compare > div:first-child > .label {
+    left: 2px;
+}
+
+.img-compare > div:nth-child(2) > .label {
+    right: 2px;
+}
+
+.img-compare-stats {
+    font-family: monospace;
+    font-size: 0.8rem;
+    color: #bbb;
+}

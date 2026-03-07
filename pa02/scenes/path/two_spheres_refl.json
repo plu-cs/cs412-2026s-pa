@@ -1,0 +1,51 @@
+{
+  "num_samples": 128,
+  "background": [1,1,1],
+  "camera": {
+    "vfov": 45.0,
+    "transform": {
+      "from": [0, 0, 4]
+    },
+    "resolution": [640, 480],
+    "focal_dist": 1.0
+  },
+  "materials": [
+    {
+      "name": "gray",
+      "type": "lambertian",
+      "albedo": [0.5,0.5,0.5]
+    },
+    {
+      "name": "green",
+      "type": "lambertian",
+      "albedo": [0.25,0.8,0.25]
+    },
+    {
+      "name": "shiny",
+      "type": "metal",
+      "albedo": [0.8,0.8,0.8],
+      "roughness": 0.1
+    }
+  ],
+  "surfaces": [
+    {
+      "type": "quad",
+      "name": "floor",
+      "size": [500, 500],
+      "transform": [ { "rotate": [-90, 1, 0, 0] }, { "translate": [0,-1,0] } ],
+      "material": "gray"
+    },
+    {
+      "type": "sphere",
+      "radius": 1,
+      "transform": { "translate": [0.5, 0, 0] },
+      "material": "shiny"
+    },
+    {
+      "type": "sphere",
+      "radius": 0.75,
+      "transform": { "translate": [-1.6, -0.25, -1.4] },
+      "material": "green"
+    }
+  ]
+}

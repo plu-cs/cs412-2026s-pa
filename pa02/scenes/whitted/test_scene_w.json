@@ -1,0 +1,52 @@
+{
+  "num_samples": 8,
+  "background": [0.7,0.7,0.7],
+  "renderer": "whitted",
+  "camera": {
+    "vfov": 45.0,
+    "transform": {
+      "from": [0, 0.8, 3.5],
+      "at": [0, 1, 0],
+      "up": [0.0, 1.0, 0.0]
+    },
+    "resolution": [720, 540],
+    "focal_dist": 1.0
+  },
+  "materials": [
+    {
+      "name": "gray",
+      "type": "lambertian",
+      "albedo": [0.5,0.5,0.5]
+    },
+    {
+      "name": "red",
+      "type": "lambertian",
+      "albedo": [0.8,0.3,0.3]
+    }
+  ],
+  "surfaces": [
+    {
+      "type": "quad",
+      "size": [1000.0, 1000.0],
+      "transform": {
+        "rotate": [-90, 1, 0, 0]
+      },
+      "material": "gray"
+    },
+    {
+      "type": "sphere",
+      "radius": 1.0,
+      "transform": {
+        "translate": [0,1,0]
+      },
+      "material": "red"
+    }
+  ],
+  "simple_lights": [
+    {
+        "type": "point",
+        "position": [4,4,3],
+        "power": [20,20,20]
+    }
+  ]
+}

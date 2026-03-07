@@ -1,0 +1,122 @@
+{
+  "num_samples": 1024,
+  "background": [0,0,0],
+  "camera": {
+    "vfov": 45.0,
+    "transform": {
+      "from": [0, 0, 3.4],
+      "at": [0, 0, 0],
+      "up": [0.0, 1.0, 0.0]
+    },
+    "resolution": [500, 500],
+    "focal_dist": 1.0
+  },
+  "materials": [
+    {
+      "name": "gray",
+      "type": "lambertian",
+      "albedo": [0.5,0.5,0.5]
+    },
+    {
+      "name": "red",
+      "type": "lambertian",
+      "albedo": [0.8,0.3,0.3]
+    },
+    {
+      "name": "green",
+      "type": "lambertian",
+      "albedo": [0.3,0.8,0.3]
+    },
+    {
+      "name": "light",
+      "type": "light",
+      "power": [7.5,7.5,7.5]
+    },
+    {
+      "name": "chrome",
+      "type": "metal",
+      "albedo": [1,1,1],
+      "roughness": 0
+    },
+    {
+      "name": "glass",
+      "type": "dielectric",
+      "ior": 1.5
+    }
+  ],
+  "surfaces": [
+    {
+      "type": "sphere",
+      "name": "chrome sphere",
+      "radius": 0.35,
+      "transform": { "translate": [-0.4, -0.65, -0.25] },
+      "material": "chrome"
+    },
+    {
+      "type": "sphere",
+      "name": "glass sphere",
+      "radius": 0.35,
+      "transform": { "translate": [0.4, -0.65, 0.25] },
+      "material": "glass"
+    },
+    {
+      "type": "quad",
+      "name": "left_wall",
+      "size": [2, 2],
+      "transform": [
+        { "rotate": [90, 0, 1, 0] },
+        { "translate": [-1, 0, 0] }
+      ],
+      "material": "red"
+    },
+    {
+      "type": "quad",
+      "name": "right_wall",
+      "size": [2, 2],
+      "transform": [
+        { "rotate": [-90, 0, 1, 0] },
+        { "translate": [1, 0, 0] }
+      ],
+      "material": "green"
+    },
+    {
+      "type": "quad",
+      "name": "back_wall",
+      "size": [2, 2],
+      "transform": [
+        { "translate": [0, 0, -1] }
+      ],
+      "material": "gray"
+    },
+    {
+      "type": "quad",
+      "name": "ceiling",
+      "size": [2, 2],
+      "transform": [
+        { "rotate": [90, 1, 0, 0] },
+        { "translate": [0, 1, 0] }
+      ],
+      "material": "gray"
+    },
+    {
+      "type": "quad",
+      "name": "floor",
+      "size": [2, 2],
+      "transform": [
+        { "rotate": [-90, 1, 0, 0] },
+        { "translate": [0, -1, 0] }
+      ],
+      "material": "gray"
+    },
+    {
+      "type": "quad",
+      "name": "light",
+      "size": [0.75, 0.75],
+      "transform": [
+        { "rotate": [90, 1, 0, 0] },
+        { "translate": [0, 0.99, 0] }
+      ],
+      "material": "light"
+    }
+  ]
+}

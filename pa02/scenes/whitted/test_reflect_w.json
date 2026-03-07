@@ -1,0 +1,67 @@
+ {
+  "num_samples": 8,
+  "background": [0.6,0.6,0.6],
+  "renderer": "whitted",
+  "camera": {
+    "vfov": 45.0,
+    "resolution": [400, 200],
+    "focal_dist": 1.0,
+    "transform": {
+      "from": [1.9, 0.8, -3.5],
+      "at": [1.9, 0.8, 0.0],
+      "up": [0.0, 1.0, 0.0]
+    }
+  },
+  "materials": [
+    {
+      "name": "ground",
+      "type": "lambertian",
+      "albedo": [0.2,0.3,0.2]
+    },
+    {
+      "name": "matte",
+      "type": "lambertian",
+      "albedo": [1.0,0.25,0.25]
+    },
+    {
+      "name": "shiny",
+      "type": "metal",
+      "roughness": 0.01,
+      "albedo": [1,1,1]
+    }
+  ],
+  "surfaces": [
+    {
+      "type": "sphere",
+      "radius": 1000.0,
+      "transform": {
+          "translate": [0, -1000, 0]
+      },
+      "material": "ground"
+    },
+    {
+      "type": "sphere",
+      "radius": 1.0,
+      "transform": {
+          "translate": [0, 1, 1]
+      },
+      "material": "shiny"
+    },
+    {
+      "type": "sphere",
+      "radius": 1.0,
+      "transform": {
+          "translate": [3, 1, 0]
+      },
+      "material": "matte"
+    }
+  ],
+  "simple_lights": [
+    {
+        "type": "directional",
+        "direction": [5, -1, 5],
+        "power": [1,1,1]
+    }
+  ]
+}
+ 

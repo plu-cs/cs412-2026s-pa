@@ -1,0 +1,26 @@
+{
+  "name": "lutert-ts",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "test": "vitest",
+    "task01": "tsx test/task01.ts",
+    "task02": "tsx test/task02.ts",
+    "task04": "tsx test/task04.ts",
+    "task05": "tsx test/task05.ts"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.4",
+    "typescript": "^5.6.2",
+    "vite": "^7",
+    "vitest": "^4"
+  },
+  "dependencies": {
+    "fast-png": "^8.0.0",
+    "gl-matrix": "^4.0.0-beta.2"
+  }
+}

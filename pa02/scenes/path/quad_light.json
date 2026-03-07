@@ -1,0 +1,83 @@
+{
+  "num_samples": 100000,
+  "background": [0,0,0],
+  "camera": {
+    "vfov": 45.0,
+    "transform": {
+      "from": [0.2, 1.75, 6],
+      "at": [0, 1, 0]
+    },
+    "resolution": [640, 480],
+    "focal_dist": 1.0
+  },
+  "materials": [
+    {
+      "name": "gray",
+      "type": "lambertian",
+      "albedo": [0.5,0.5,0.5]
+    },
+    {
+      "name": "green",
+      "type": "lambertian",
+      "albedo": [0.25,0.8,0.25]
+    },
+    {
+      "name": "light",
+      "type": "light",
+      "power": [20,20,20]
+    },
+    {
+      "name": "chrome",
+      "type": "metal",
+      "albedo": [1,1,1],
+      "roughness": 0
+    },
+    {
+      "name": "glass",
+      "type": "dielectric",
+      "ior": 1.5
+    }
+  ],
+  "surfaces": [
+    {
+      "type": "quad",
+      "name": "floor",
+      "size": [200, 200],
+      "transform": { "rotate": [-90, 1, 0, 0] },
+      "material": "gray"
+    },
+    {
+      "type": "sphere",
+      "name": "chrome sphere",
+      "radius": 1.5,
+      "transform": { "translate": [-2.5, 1.5, -3.5] },
+      "material": "chrome"
+    },
+    {
+      "type": "sphere",
+      "name": "glass sphere",
+      "radius": 1,
+      "transform": { "translate": [0.5, 1, 0] },
+      "material": "glass"
+    },
+    {
+      "type": "sphere",
+      "name": "green sphere",
+      "radius": 1,
+      "transform": { "translate": [2.2, 1, -4] },
+      "material": "green"
+    },
+    {
+      "type": "quad",
+      "name": "light",
+      "size": [1,1],
+      "transform": [
+        { "rotate": [-90, 0, 1, 0] },
+        { "rotate": [50, 0, 0, 1]},
+        { "translate": [4, 3.5, 0] },
+        { "rotate": [65, 0, 1, 0] }
+      ],
+      "material": "light"
+    }
+  ]
+}
