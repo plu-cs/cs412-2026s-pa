@@ -1,0 +1,21 @@
+{
+  "name": "plu_rasterizer",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build"
+  },
+  "devDependencies": {
+    "lil-gui": "^0.x",
+    "typescript": "^5",
+    "vite": "^7",
+    "vitest": "^4"
+  },
+  "dependencies": {
+    "@types/stats.js": "^0.17.4",
+    "gl-matrix": "^4.0.0-beta.2",
+    "stats.js": "^0.17.0"
+  }
+}
