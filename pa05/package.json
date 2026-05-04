@@ -1,0 +1,17 @@
+{
+  "name": "pa05",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build"
+  },
+  "devDependencies": {
+    "@types/three": "^0.182.0",
+    "lil-gui": "^0.x",
+    "three": "0.x",
+    "typescript": "^5.x",
+    "vite": "^7"
+  }
+}
